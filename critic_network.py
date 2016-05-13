@@ -1,7 +1,7 @@
 
-import tensorflow as tf 
-from utility import *
+import tensorflow as tf
 import numpy as np
+import math
 
 LAYER1_SIZE = 200
 LAYER2_SIZE = 100
@@ -41,7 +41,7 @@ class CriticNetwork:
 
 			# Define training optimizer
 			self.y_input = tf.placeholder("float",[None,1])
-			self.cost = tf.pow(self.q_value_output-self.y_input,2)/tf.to_float(tf.shape(self.y_input)[0]) 
+			self.cost = tf.pow(self.q_value_output-self.y_input,2)/tf.to_float(tf.shape(self.y_input)[0])
 			+ 0.0001*tf.reduce_sum(tf.pow(self.W2,2))+0.0001*tf.reduce_sum(tf.pow(self.b2,2))
 			self.optimizer = tf.train.AdamOptimizer(LEARNING_RATE).minimize(self.cost)
 
@@ -49,7 +49,7 @@ class CriticNetwork:
 			#self.action_gradients = [self.action_gradients_v[0]/tf.to_float(tf.shape(self.action_gradients_v[0])[0])]
 
 			self.sess.run(tf.initialize_all_variables())
-			# copy target parameters 
+			# copy target parameters
 			self.sess.run([
 				self.target_W1.assign(self.W1),
 				self.target_b1.assign(self.b1),
@@ -130,4 +130,4 @@ class CriticNetwork:
 	def save_network(self,time_step):
 		self.saver.save(self.session, 'saved_networks/' + 'critic-network', global_step = time_step)
 
-		
+
