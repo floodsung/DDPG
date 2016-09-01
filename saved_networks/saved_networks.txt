@@ -1,1 +1,0 @@
-The networks are saved in this folder.
