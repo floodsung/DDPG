@@ -11,7 +11,9 @@ Some Mujoco environments are still unsolved on OpenAI Gym.
 ## Some Evaluations
 
 1 [InvertedPendulum](https://gym.openai.com/evaluations/eval_mviLO6dZTCmtF1KSmprM1w#reproducibility)
+
 2 [InvertedDoublePendulum](https://gym.openai.com/evaluations/eval_PtYUMaEUSwqS3YUYA6MOQ#reproducibility)
+
 3 [Hopper unsolved](https://gym.openai.com/evaluations/eval_MwvKWh5CSp6SO8IAWU4pqw#reproducibility)
 
 
@@ -37,6 +39,8 @@ from actor_network import ActorNetwork
 1 [https://github.com/rllab/rllab](https://github.com/rllab/rllab)
 
 2 [https://github.com/MOCR/DDPG](https://github.com/MOCR/DDPG)
+
+3 [https://github.com/SimonRamstedt/ddpg](https://github.com/SimonRamstedt/ddpg)
 
 
 
