@@ -1,6 +1,8 @@
 
 import tensorflow as tf 
 import numpy as np
+import math
+
 
 LAYER1_SIZE = 400
 LAYER2_SIZE = 300
