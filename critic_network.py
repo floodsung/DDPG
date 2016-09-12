@@ -1,6 +1,5 @@
 
 import tensorflow as tf 
-from utility import *
 import numpy as np
 
 LAYER1_SIZE = 400

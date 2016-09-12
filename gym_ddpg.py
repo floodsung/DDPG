@@ -3,7 +3,7 @@ from ddpg import *
 import gc
 gc.enable()
 
-ENV_NAME = 'InvertedPendulum-v1'
+ENV_NAME = 'Humanoid-v1'
 EPISODES = 100000
 TEST = 10
 
