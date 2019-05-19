@@ -25,9 +25,9 @@ cd DDPG
 python gym_ddpg.py
 
 ```
-If you want to change the Gym environment, change ENV_NAME in gym_ddpg.py.
+If you want to change the Gym environment, change `ENV_NAME` in `gym_ddpg.py`.
 
-If you want to change the Network type, change import in ddpg.py such as 
+If you want to change the Network type, change import in `ddpg.py` such as 
 
 ```
 from actor_network_bn import ActorNetwork
