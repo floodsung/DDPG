@@ -25,19 +25,19 @@ def main():
                 break
         # Testing:
         if episode % 100 == 0 and episode > 100:
-			total_reward = 0
-			for i in xrange(TEST):
-				state = env.reset()
-				for j in xrange(env.spec.timestep_limit):
-					#env.render()
-					action = agent.action(state) # direct action for test
-					state,reward,done,_ = env.step(action)
-					total_reward += reward
-					if done:
-						break
-			ave_reward = total_reward/TEST
-			print 'episode: ',episode,'Evaluation Average Reward:',ave_reward
-    env.monitor.close()
+		total_reward = 0
+		for i in xrange(TEST):
+			state = env.reset()
+			for j in xrange(env.spec.timestep_limit):
+				#env.render()
+				action = agent.action(state) # direct action for test
+				state,reward,done,_ = env.step(action)
+				total_reward += reward
+				if done:
+					break
+				ave_reward = total_reward/TEST
+				print 'episode: ',episode,'Evaluation Average Reward:',ave_reward
+    	env.monitor.close()
 
 if __name__ == '__main__':
     main()
