@@ -25,7 +25,7 @@ def main():
                 break
         # Testing:
         if episode % 100 == 0 and episode > 100:
-			total_reward = 0
+			#total_reward = 0
 			for i in xrange(TEST):
 				state = env.reset()
 				for j in xrange(env.spec.timestep_limit):
